@@ -174,6 +174,7 @@ import IntentsUI
 
             var isEligibleForSearch = true
             var isEligibleForPrediction = true
+            var isEligibleForHandoff = true
 
             if command.arguments.count > 5 {
                 isEligibleForSearch = command.arguments[4] as? Bool ?? true
@@ -189,6 +190,7 @@ import IntentsUI
             activity.persistentIdentifier = NSUserActivityPersistentIdentifier(persistentIdentifier)
             activity.isEligibleForSearch = isEligibleForSearch
             activity.isEligibleForPrediction = isEligibleForPrediction
+            activity.isEligibleForHandoff = isEligibleForHandoff
 
             if (makeActive) {
                 ActivityDataHolder.setUserInfo(userInfo)
